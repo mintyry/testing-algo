@@ -61,5 +61,46 @@ var doubleIt = function(head) {
     let test =  [1, 1, 1]
     console.log(doubleIt(test));
 
+    // ===============
+
+    // CHECK IF PALINDROME
+
+    /**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    let newX = x.toString();
+    // string
     
+    let xArr = [...newX]
+    console.log(xArr);
+    let reverseArr = [...xArr].reverse();
+    console.log(reverseArr);
+ 
+
+    let concatX = '';
+    for(let i = 0; i < xArr.length; i++){
+        concatX += xArr[i];
+    }
+
+    console.log(concatX);
+
+    let reverseX = '';
+    for(let i = 0; i < reverseArr.length; i++){
+        reverseX += reverseArr[i];
+    }
+
+    console.log(reverseX);
+
+  
+
+    if(concatX === reverseX) {
+        return true;
+    } else {
+        return false;
+    }
+
+};
+
     
