@@ -6,8 +6,8 @@ var twoSum = function (nums, target) {
     //     return [nums.indexOf(nums[0]), nums.indexOf(nums[1])];
     // }
 
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length - 1; j++) {
+    for (let i = 0; i < nums.length - 1; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
             if (target - nums[i] === nums[j]) {
                 return [nums.indexOf(nums[i]), nums.indexOf(nums[j])]
             } 
@@ -15,4 +15,4 @@ var twoSum = function (nums, target) {
     }
 };
 
-console.log(twoSum([3, 2, 4], 6))
+console.log(twoSum([4, 2, 9, 8, 11], 20))
