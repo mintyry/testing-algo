@@ -5,14 +5,17 @@ var twoSum = function (nums, target) {
     // if (nums[0] + nums[1] === target){
     //     return [nums.indexOf(nums[0]), nums.indexOf(nums[1])];
     // }
+let indices = [];
 
     for (let i = 0; i < nums.length - 1; i++) {
         for (let j = i + 1; j < nums.length; j++) {
             if (target - nums[i] === nums[j]) {
-                return [nums.indexOf(nums[i]), nums.indexOf(nums[j])]
+                // push returns length
+                indices.push(i, j);
+                return indices;
             } 
         }
     }
 };
 
-console.log(twoSum([4, 2, 9, 8, 11], 20))
+console.log(twoSum([2, 3, 8, 1], 9))
