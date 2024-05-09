@@ -1,0 +1,16 @@
+/* practicing grid */
+
+.container {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item {
+    background-color: blueviolet;
+ 
+}
+
+.item:nth-child(2n) {
+    background-color: aqua;
+}
